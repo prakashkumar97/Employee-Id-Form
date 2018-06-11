@@ -1,0 +1,109 @@
+<html>
+    <head>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <meta charset=utf-8 />
+    <title>Employee Id Form</title>
+    <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      article, aside, figure, footer, header, hgroup, 
+      menu, nav, section { display: block; }
+    </style>
+    <link href="photoupload.css" rel="stylesheet">
+    </head>
+    <body>
+            <form>
+     <div class="container contclass">
+        <h1 style="font-family:verdana;">Employee Id Form</h1>
+        <br>
+        <br>
+        <div class="form-group row">
+            <label style="font-family:verdana;" class="control-label col-sm-3" for="eFirstName">First Name (Preferred Name)</label>
+            <input type="text" id="eFirstName" placeholder=" Enter Your First Name">
+        </div>
+         <br>
+         <div class="form-group row">  
+            <label class="control-label col-sm-3" style="font-family:verdana;" for="eFullName">Full Name</label> 
+            <input type="text" id="eFullName"  placeholder=" Enter Your Full Name">
+         </div>
+         <br>
+         <div class="form-group row">
+            <label class="control-label col-sm-3" style="font-family:verdana;" for="eDesignation">Designation</label> 
+            <input type="text" id="eDesignation"  placeholder=" Enter Your Designation">
+        </div>
+            <br>
+        <div class="form-group row">
+            <label class="control-label col-sm-3" style="font-family:verdana;" for="eEmpcode">Employee Code</label> 
+            <input type="text" id="eEmpcode" onkeypress="return (event.charCode > 47 && 
+            event.charCode < 58) || (event.charCode === 8) || (event.charCode === 32)"  placeholder=" Enter the Employee Code">
+        </div>
+        <br>
+        <div class="form-group row">
+                <label class="control-label col-sm-3" style="font-family:verdana;" for="eBloodGroup">Blood Group</label> 
+                <select required id="eBloodGroup">
+                        <option value="select">Select</option>
+                        <option value="o+">o+</option>
+                        <option value="o-">o-</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                      </select>
+            </div>
+            <br>
+            <div class="form-group row">
+                    <label class="control-label col-sm-3" style="font-family:verdana;" for="eReason">Reason for Issue</label> 
+                    <select required id="eReason">
+                            <option value="select">Select the Reason</option>
+                            <option value="New Employee">New Employee</option>
+                            <option value="Lost">Lost</option>
+                            <option value="Defaced">Defaced</option>
+                            <option value="Conversion">Conversion</option>
+                            <option value="Designation Change">Designation Change</option>
+                          </select>
+                </div>
+                <br>
+                <div class="form-group row">
+                <label class="control-label col-sm-3" style="font-family:verdana;" for="empdate">Date of Employment</label>
+                  <input type="date" id="empdate" >
+                 </div>
+                 <br>
+                 <div class="form-group row">
+                        <label for="mailid" class="col-sm-3 col-form-label" style="font-family:verdana;">E-Mail ID(Virtusa)</label>
+                          <input type="text"  id="mailid" placeholder="Enter your EmailID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" >
+                 </div>
+                 <br>
+                 <div class="form-group row">
+                        <label for="mobile" class="col-sm-3 col-form-label" style="font-family:verdana;">EMPLOYEE MOBILE NUMBER</label>
+                          <input type="text" maxlength="10" id="mobile" placeholder="Enter your Mobile Number" onkeypress="return (event.charCode > 47 && 
+                          event.charCode < 58) || (event.charCode === 8) || (event.charCode === 32)">
+                      </div>
+                      <br>
+                      <div class="form-group row">
+                            <label for="emergency" class="col-sm-3 col-form-label"  style="font-family:verdana;">EMERGENCY CONTACT NUMBER</label>
+                              <input type="text" maxlength="10" id="emergency" placeholder="Enter your Emergency Contact Number" onkeypress="return (event.charCode > 47 && 
+                              event.charCode < 58) || (event.charCode === 8) || (event.charCode === 32)">
+                          </div>
+                          <br>
+     </div>
+     <br>
+     <div id="submitbtn">
+     <button type="submit" class="btn btn-primary">Submit</button>   
+     </div>      
+     <div class="fileposition">
+            <input type='file' onchange="readURL(this);" /> 
+        </div>
+          <div class="imgclass">
+            <img id="blah"/>
+          </div>  
+        </form>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <script src="photoupload.js"></script>
+    </body>
+    </html>

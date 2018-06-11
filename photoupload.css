@@ -1,0 +1,47 @@
+.imgclass
+{
+    width:3.5cm;
+    height:4.5cm;
+    border-color:#26677D;
+    border-width:3px;
+    border-radius:6px;
+    background-color:lightyellow;
+    margin-top: -211px;
+    margin-left: 1104px;
+}
+.fileposition
+{
+    margin-top: -490px;
+    margin-left: 1112px;
+  
+}
+h1{
+    text-align:center;
+    font-size:40px;
+    color:#992599;
+}
+input{
+    width:15cm;
+    height:0.8cm;
+    padding:10px;
+}
+body
+{
+    background-color: thistle;
+}
+input:focus{
+    background-color:lemonchiffon;
+}
+input[type=radio] {
+   display: flex;
+    height:1.2em;
+}
+#issue
+{
+    margin:0px -272px;
+    
+}
+#submitbtn
+{
+    text-align:center;
+}
