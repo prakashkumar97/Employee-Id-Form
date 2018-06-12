@@ -11,7 +11,7 @@
 }
 .fileposition
 {
-    margin-top: -490px;
+    margin-top: -505px;
     margin-left: 1112px;
   
 }
@@ -29,19 +29,20 @@ body
 {
     background-color: thistle;
 }
+select:focus
+{
+    background-color:lemonchiffon;
+}
 input:focus{
     background-color:lemonchiffon;
 }
-input[type=radio] {
-   display: flex;
-    height:1.2em;
+input:blur{
+    background-color:white;
 }
-#issue
+span
 {
-    margin:0px -272px;
-    
+color:red;
 }
-#submitbtn
-{
+#submitbtn{
     text-align:center;
 }
