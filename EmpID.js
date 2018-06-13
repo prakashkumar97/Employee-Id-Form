@@ -1,4 +1,19 @@
 function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result)
+                // .width(248)
+                // .height(251);
+        };
+
+         reader.readAsDataURL(input.files[0]);
+    }
+}
+function addDetails()
+{
     if (validateFirstName()) 
     {
         $('#errForFirstName').hide();
@@ -8,9 +23,6 @@ function readURL(input) {
             if(validateEmpCode())
                 {
                     $("#errForEmpCode").hide();
-                    if(validatebloddGroup())
-                    {
-                        $("#errForBloodgrp").hide();
                         if(validateEmail())
                         {
                             $("#errForEmail").hide();
@@ -31,9 +43,6 @@ function readURL(input) {
                         }else{
                             displayErrorMessageForMail();
                         }
-                    }else{
-                        displayErrorMessageForBlood();
-                    }
                    // postData();
                 }else{
                     displayErrorMessageForCode();
@@ -63,10 +72,6 @@ function displayErrorMessageForMobile()
 function displayErrorMessageForMail()
 {
     $("#errForEmail").show();
-}
-function displayErrorMessageForBlood()
-{
-    $("#errForBloodgrp").show();
 }
 function displayErrorMessageForCode()
 {
@@ -189,4 +194,11 @@ const onPostSuccess = (data) => {
 
 $('document').ready(() => {
     $('.span-for-errors').hide();
+});
+$('#Entireform').on('keyup keypress', function(e) {
+  var keyCode = e.keyCode || e.which;
+  if (keyCode === 13) { 
+    e.preventDefault();
+    return false;
+  }
 });
